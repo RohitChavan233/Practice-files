@@ -1,8 +1,7 @@
-var obj = {
-    name: "rohit",
-    age: "19"
-} 
 
-console.log(obj);
-
-
+var user = {
+    name : 'rohit',
+    age : 20,
+    batch : 'cohot 3',
+    
+}
