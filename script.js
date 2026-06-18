@@ -33,10 +33,24 @@
 
 
 
-const obj1 = { a: 1, b: 2 }
-const obj2 = { c: 3, d: 4 }
+// const obj1 = { a: 1, b: 2 }
+// const obj2 = { c: 3, d: 4 }
 
-var obj = {...obj1, ...obj2}
+// var obj = {...obj1, ...obj2}
 
-console.log(obj);
+// console.log(obj);
+
+function greet(){
+    console.log("happy birthday");
+
+    function sayHi(){
+        console.log("hi");
+        
+    }
+    
+    sayHi()
+}
+
+greet()
+
 
