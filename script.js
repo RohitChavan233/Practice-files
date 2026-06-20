@@ -40,17 +40,36 @@
 
 // console.log(obj);
 
-function greet(){
-    console.log("happy birthday");
+// function greet(){
+//     console.log("happy birthday");
 
-    function sayHi(){
-        console.log("hi");
-        
+//     function sayHi(){
+//         console.log("hi");   
+//     }
+//     return sayHi()
+// }
+
+// var ncp = greet()
+
+// console.log(ncp);
+
+
+
+
+
+function createBankAccount(){
+    let balance = 0
+
+    return{
+        deposit(amount){balance += amount; return balance;},
+        getBalance(){return balance }
     }
-    
-    sayHi()
 }
 
-greet()
 
+const acc = createBankAccount()
+acc.deposit(500)
+
+console.log(acc.getBalance());
+// console.log(acc.balance);
 
