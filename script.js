@@ -57,19 +57,30 @@
 
 
 
-function createBankAccount(){
-    let balance = 0
+// function createBankAccount(){
+//     let balance = 0
 
-    return{
-        deposit(amount){balance += amount; return balance;},
-        getBalance(){return balance }
+//     return{
+//         deposit(amount){balance += amount; return balance;},
+//         getBalance(){return balance }
+//     }
+// }
+
+
+// const acc = createBankAccount()
+// acc.deposit(500)
+
+// console.log(acc.getBalance());
+// // console.log(acc.balance);
+
+var obj = {
+    firstName: ' Rohit ',
+    lastName: ' Chavan ',
+    age : 33,
+    getIntro: function(){
+        console.log(this.lastName + this.firstName);
+        
     }
 }
 
-
-const acc = createBankAccount()
-acc.deposit(500)
-
-console.log(acc.getBalance());
-// console.log(acc.balance);
-
+obj.getIntro()
