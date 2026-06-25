@@ -73,14 +73,40 @@
 // console.log(acc.getBalance());
 // // console.log(acc.balance);
 
-var obj = {
-    firstName: ' Rohit ',
-    lastName: ' Chavan ',
-    age : 33,
-    getIntro: function(){
-        console.log(this.lastName + this.firstName);
-        
+// var obj = {
+//     firstName: ' Rohit ',
+//     lastName: ' Chavan ',
+//     age : 33,
+//     getIntro: function(){
+//         console.log(this.lastName + this.firstName);
+
+//     }
+// }
+
+// var obj2 = {
+//     firstName:' Rohan ',
+//     lastName: ' Chavan '
+// }
+
+// obj.getIntro.call(obj2)
+
+
+var student1 = {
+    firstName: 'rohit',
+    lastName: 'chavan',
+    getIntro: function (city, state) {
+        console.log(`${this.firstName} ${this.lastName}, ${city} (${state})`);
+
     }
 }
 
-obj.getIntro()
+var student2 = {
+    firstName: 'rohan',
+    lastName: 'chavan',
+}
+
+
+var out = student1.getIntro.bind(student2, "Boisar", "Maharashtra")
+
+console.log(out);
+out()
