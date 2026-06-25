@@ -91,22 +91,22 @@
 // obj.getIntro.call(obj2)
 
 
-var student1 = {
-    firstName: 'rohit',
-    lastName: 'chavan',
-    getIntro: function (city, state) {
-        console.log(`${this.firstName} ${this.lastName}, ${city} (${state})`);
+// var student1 = {
+//     firstName: 'rohit',
+//     lastName: 'chavan',
+//     getIntro: function (city, state) {
+//         console.log(`${this.firstName} ${this.lastName}, ${city} (${state})`);
 
-    }
-}
+//     }
+// }
 
-var student2 = {
-    firstName: 'rohan',
-    lastName: 'chavan',
-}
+// var student2 = {
+//     firstName: 'rohan',
+//     lastName: 'chavan',
+// }
 
 
-var out = student1.getIntro.bind(student2, "Boisar", "Maharashtra")
+// var out = student1.getIntro.bind(student2, "Boisar", "Maharashtra")
 
-console.log(out);
-out()
+// console.log(out);
+// out()
