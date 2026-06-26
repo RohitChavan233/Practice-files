@@ -1,14 +1,20 @@
-var hero = {
-    fname: 'rohit',
-    lname: 'chavan',
-    age: 22,
-    getInto: () => {
-        const sayMyName = () => {
-            console.log(this);
+var place = {
+    placeName: 'Office',
+    behavior: 'Proffesional',
+    sayHi: function(){
+        const insidePlace = {
+            placeName: 'Meeting room',
+            behavior: 'Roasting',
+            sayHiInforntOffriends:function(){
+                console.log(this.behavior);
+            },
+            sayHiInforntOfClients:()=>{
+                console.log(this.behavior);
+            },
         }
-        sayMyName()
 
-    }
+        insidePlace.sayHiInforntOfClients()
+    },
 }
 
-hero.getInto()
+place.sayHi()
