@@ -24,9 +24,20 @@ function CreateBook (bookName, auth, Page){
     this.bookName = bookName;
     this.authorName = auth;
     this.pages = Page ;
+    this.getfrontPage = function (){
+        console.log('Book Name:', this.bookName);
+        console.log('Author Name:', this.authorName);
+        console.log('Pages:', this.pages);
+        
+    }
 }
 
-let book = new CreateBook('Rich Dad Poor Dad', 'JK Rowling', 553)
-let book1 = new CreateBook('Rich Dad Poor Dad', 'JK Rowling', 553)
-console.log(book);
-console.log(book1);
+let book = new CreateBook('Rich Dad Poor Dad', 'Robert Kiyosaki', 553)
+let book1 = new CreateBook('Rich Dad Poor Dad', 'Robert Kiyosaki', 553)
+let book2 = new CreateBook('Sapiens', 'Yuvan Noah Harrari', 850)
+
+// console.log(book);
+// console.log(book1);
+// console.log(book2);
+
+book.getfrontPage()
