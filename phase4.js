@@ -42,19 +42,57 @@
 
 // book.getfrontPage()
 
-class MakeBooks {
-    constructor(bookName, auth, Page) {
-        this.bookName = bookName;
-        this.authorName = auth;
-        this.pages = Page;
-        this.getfrontPage = function () {
-            console.log('Book Name:', this.bookName);
-            console.log('Author Name:', this.authorName);
-            console.log('Pages:', this.pages);
-        }
+// class MakeBooks {
+//     constructor(bookName, auth, Page) {
+//         this.bookName = bookName;
+//         this.authorName = auth;
+//         this.pages = Page;
+//         this.getfrontPage = function () {
+//             console.log('Book Name:', this.bookName);
+//             console.log('Author Name:', this.authorName);
+//             console.log('Pages:', this.pages);
+//         }
+//     }
+// }
+
+// let obj = new MakeBooks('Rich Dad Poor Dad', 'Robert Kiyosaki', 553)
+// console.log(obj);
+// obj.getfrontPage()
+
+class User{
+    constructor(fname, lname, age){
+        this.fname = fname
+        this.lname = lname
+        this.age = age
+        
+    }
+    greet(){
+        console.log("Hello JI, ", this.fname);
+        
     }
 }
 
-let obj = new MakeBooks('Rich Dad Poor Dad', 'Robert Kiyosaki', 553)
-console.log(obj);
-obj.getfrontPage()
+
+class Admin extends User{
+    constructor(fname, lname, age){
+        super(fname, lname, age)
+        this.isVerified = true
+    }
+
+    addCourse(){
+        console.log("Add Your Course");
+    }
+
+    removeCourse(){
+        console.log("Remove all the Course");
+    }
+}
+
+var u1 = new User('rohit', 'chavan', 20)
+var u2 = new Admin('rohan', 'chavan', 15)
+
+console.log(u1);
+console.log(u2);
+
+
+u2.removeCourse()
