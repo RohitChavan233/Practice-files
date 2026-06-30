@@ -59,40 +59,42 @@
 // console.log(obj);
 // obj.getfrontPage()
 
-class User{
-    constructor(fname, lname, age){
-        this.fname = fname
-        this.lname = lname
-        this.age = age
+// class User{
+//     constructor(fname, lname, age){
+//         this.fname = fname
+//         this.lname = lname
+//         this.age = age
         
-    }
-    greet(){
-        console.log("Hello JI, ", this.fname);
+//     }
+//     greet(){
+//         console.log("Hello JI, ", this.fname);
         
-    }
-}
+//     }
+// }
 
 
-class Admin extends User{
-    constructor(fname, lname, age){
-        super(fname, lname, age)
-        this.isVerified = true
-    }
+// class Admin extends User{
+//     constructor(fname, lname, age){
+//         super(fname, lname, age)
+//         this.isVerified = true
+//     }
 
-    addCourse(){
-        console.log("Add Your Course");
-    }
+//     addCourse(){
+//         console.log("Add Your Course");
+//     }
 
-    removeCourse(){
-        console.log("Remove all the Course");
-    }
-}
+//     removeCourse(){
+//         console.log("Remove all the Course");
+//     }
+// }
 
-var u1 = new User('rohit', 'chavan', 20)
-var u2 = new Admin('rohan', 'chavan', 15)
+// var u1 = new User('rohit', 'chavan', 20)
+// var u2 = new Admin('rohan', 'chavan', 15)
 
-console.log(u1);
-console.log(u2);
+// console.log(u1);
+// console.log(u2);
 
 
-u2.removeCourse()
+// u2.removeCourse()
+
+
