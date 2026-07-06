@@ -8,8 +8,19 @@
 
 // console.log('end')
 
-setInterval(() => {
-    console.log(
-        'interval'
-    )
-}, 3000);
+// setInterval(() => {
+//     let i = 2
+//     if (i == 2){
+//         console.log(i)
+//     }
+// }, 3000);
+
+
+
+async function dataLao(){
+    let response = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    let data = await response.json()
+    console.log(data)
+}
+
+dataLao()
