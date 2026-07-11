@@ -1,3 +1,13 @@
 // attributes and properties
 
-console.log('hello')
+const h3 = document.querySelector('#id1')
+const res = h3.getAttribute('class')
+console.log(res)
+
+// h3.removeAttribute('class')
+
+
+// h3.setAttribute('width', '200px')
+// console.log(h3.getAttribute('width'))
+
+console.log(h3.hasAttribute('class'))
