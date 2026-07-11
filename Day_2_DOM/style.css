@@ -8,3 +8,28 @@ html , body{
     height: 100%;
     width: 100%;
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+.bulb{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+button{
+    padding:20px 40px;
+    color: white;
+    background-color: rgb(27, 198, 255);
+    border-radius: 20px;
+    border: none;
+}
