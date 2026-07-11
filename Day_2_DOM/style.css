@@ -33,3 +33,7 @@ button{
     border-radius: 20px;
     border: none;
 }
+
+.lightUp{
+    background-color: yellow;
+}
