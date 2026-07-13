@@ -10,4 +10,9 @@ console.log(res)
 // h3.setAttribute('width', '200px')
 // console.log(h3.getAttribute('width'))
 
-console.log(h3.hasAttribute('class'))
+// console.log(h3.hasAttribute('class'))
+
+const userCart = document.querySelector('#user-cart')
+console.log(userCart)
+
+console.log(userCart.getAttribute('get-user'))
