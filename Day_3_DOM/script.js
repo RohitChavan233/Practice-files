@@ -24,9 +24,27 @@
 
 // input.value vs input.getAttribute("value")
 
-const inp = document.querySelector('input')
-const btn = document.querySelector('button')
+// const inp = document.querySelector('input')
+// const btn = document.querySelector('button')
 
-btn.addEventListener('click', ()=>{
-    console.log(inp.value)
-})
+// btn.addEventListener('click', ()=>{
+//     console.log(inp.value)
+// })
+
+
+// creasting inserting and removing elements form dom
+
+// const main  = document.querySelector('main')
+// // console.log(footer)
+
+// const footer = document.createElement('footer')
+// const span = document.createElement('span')
+// const child = document.body.appendChild(footer)
+
+// span.textContent = "hello "
+
+// main.append(span)
+// main.appendChild(footer)
+// main.removeChild(span)
+
+
