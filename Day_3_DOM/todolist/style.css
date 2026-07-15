@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background-color: black ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    width: 60%;
+    background-color: rgb(172, 170, 170);
+    border-radius: 20px;
+}
+
+input{
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
+
+button{
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    color: black;
+    border: 1px solid gray;
+    
+}
