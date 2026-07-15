@@ -20,8 +20,6 @@
 
 
 
-
-
 // input.value vs input.getAttribute("value")
 
 // const inp = document.querySelector('input')
