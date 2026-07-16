@@ -27,8 +27,9 @@ const email = document.querySelector('#email')
 
 form.addEventListener('submit', (events)=>{
     events.preventDefault()
-    console.log(name.value)
-    console.log(email.value)
+    
+    console.log(events.target[0].value)
+    console.log(events.target[1].value)
     
     // console.log('event reloads')
 
