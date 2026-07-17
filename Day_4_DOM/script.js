@@ -26,9 +26,61 @@ const inp1 = document.querySelector('#name')
 const inp2 = document.querySelector('#email')
 const user = document.querySelector('.users')
 
-form.addEventListener('submit', (events)=>{
+
+let usersData = [
+    {
+        "id": 1,
+        "name": "Aarav Sharma",
+        "email": "aarav.sharma@example.com",
+        "image": "https://randomuser.me/api/portraits/men/11.jpg",
+        "dob": "2001-05-14"
+    },
+    {
+        "id": 2,
+        "name": "Priya Verma",
+        "email": "priya.verma@example.com",
+        "image": "https://randomuser.me/api/portraits/women/25.jpg",
+        "dob": "1999-11-08"
+    },
+    {
+        "id": 3,
+        "name": "Rohan Patil",
+        "email": "rohan.patil@example.com",
+        "image": "https://randomuser.me/api/portraits/men/42.jpg",
+        "dob": "2002-01-27"
+    },
+    {
+        "id": 4,
+        "name": "Sneha Kulkarni",
+        "email": "sneha.kulkarni@example.com",
+        "image": "https://randomuser.me/api/portraits/women/63.jpg",
+        "dob": "2000-09-19"
+    },
+    {
+        "id": 5,
+        "name": "Vikram Desai",
+        "email": "vikram.desai@example.com",
+        "image": "https://randomuser.me/api/portraits/men/78.jpg",
+        "dob": "1998-03-05"
+    }
+]
+
+usersData.forEach((elem)=>{
+    // console.log(usersData)
+    user.innerHTML += `<div class="user_card">
+            <div class="img_box">
+                <img src="${elem.image}">
+            </div>
+            <div class="text">
+                <h3>Name: ${elem.name}</h3>
+                <p>Email: ${elem.email}</p>
+            </div>
+        </div>`
+})
+
+form.addEventListener('submit', (events) => {
     events.preventDefault()
-    
+
     let name = inp1.value
     let email = inp2.value
 
