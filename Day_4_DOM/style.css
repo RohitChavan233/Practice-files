@@ -20,8 +20,8 @@ body{
 
 form{
     border-radius: 20px;
-    padding: 30px;
-    height: 30%;
+    padding: 25px;
+    height: 35%;
     width: 50%;
     background-color: gray;
     flex-direction: column;
