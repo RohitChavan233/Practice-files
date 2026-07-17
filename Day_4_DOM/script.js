@@ -28,10 +28,11 @@ const email = document.querySelector('#email')
 form.addEventListener('submit', (events)=>{
     events.preventDefault()
     
-    console.log(events.target[0].value)
-    console.log(events.target[1].value)
-    
-    // console.log('event reloads')
+    let name_ = name.value
+    let email_ = email.value
+    console.log(name_, email_)
+
+    form.reset()
 
 
 })
