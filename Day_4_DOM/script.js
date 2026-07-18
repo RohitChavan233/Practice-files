@@ -68,7 +68,7 @@ let usersData = [
 
 const ui = () => {
     user.innerHTML = ''
-    usersData.forEach((elem) => {
+    usersData.forEach((elem, index) => {
         // console.log(usersData)
         user.innerHTML += `<div class="user_card">
             <div class="img_box">
@@ -80,7 +80,7 @@ const ui = () => {
             </div>
                 <div class="action">
                 <button id="edit">Edit</button>
-                <button onclick="deleteCard()" id="del">Delete</button>
+                <button onclick="deleteCard(${index})" id="del">Delete</button>
             </div>
         </div>`
     })
@@ -112,7 +112,7 @@ form.addEventListener('submit', (events) => {
 
 })
 
-let deleteCard = ()=>{
-    usersData.pop()
+let deleteCard = (index)=>{
+    usersData.splice(index, 1)
     ui()
 }
