@@ -67,6 +67,7 @@ let usersData = [
 ]
 
 const ui = () => {
+    user.innerHTML = ''
     usersData.forEach((elem) => {
         // console.log(usersData)
         user.innerHTML += `<div class="user_card">
