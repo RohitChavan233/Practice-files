@@ -66,9 +66,10 @@ let usersData = [
     }
 ]
 
-usersData.forEach((elem)=>{
-    // console.log(usersData)
-    user.innerHTML += `<div class="user_card">
+const ui = () => {
+    usersData.forEach((elem) => {
+        // console.log(usersData)
+        user.innerHTML += `<div class="user_card">
             <div class="img_box">
                 <img src="${elem.image}">
             </div>
@@ -77,26 +78,29 @@ usersData.forEach((elem)=>{
                 <p>Email: ${elem.email}</p>
             </div>
         </div>`
-})
+    })
+}
+
+ui()
 
 form.addEventListener('submit', (events) => {
     events.preventDefault()
 
     let name = inp1.value
     let email = inp2.value
-    let link = url.value
+    let image = url.value
 
     // if(name.trim() ==='' && email.trim() === '') return
 
-    user.innerHTML += `<div class="user_card">
-            <div class="img_box">
-                <img src="${link}}">
-            </div>
-            <div class="text">
-                <h3>Name:${name}</h3>
-                <p>Email:${email}</p>
-            </div>
-        </div>`
+    usersData.push({
+        name,
+        email,
+        image,
+    })
+    
+    ui()
+
+    console.log(usersData)
 
     form.reset()
 
