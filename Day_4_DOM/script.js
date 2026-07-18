@@ -78,6 +78,10 @@ const ui = () => {
                 <h3>Name: ${elem.name}</h3>
                 <p>Email: ${elem.email}</p>
             </div>
+                <div class="action">
+                <button id="edit">Edit</button>
+                <button onclick="deleteCard()" id="del">Delete</button>
+            </div>
         </div>`
     })
 }
@@ -107,3 +111,8 @@ form.addEventListener('submit', (events) => {
 
 
 })
+
+let deleteCard = ()=>{
+    usersData.pop()
+    ui()
+}

@@ -42,7 +42,7 @@ button{
     color: black;
     /* border: 1px solid black ; */
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -56,8 +56,8 @@ button{
 
 
 .user_card{
+    height: fit-content;
     padding: 10px;
-    height: 40%;
     width: 25%;
     border-radius: 10px;
     border: 1px solid white;
@@ -79,8 +79,24 @@ button{
 
 .text{
     color: whitesmoke;
+    margin-bottom: 10px;
 }
 
 h3{
     margin-bottom: 10px;
+}
+
+.action{
+    display: flex;
+    justify-content: space-between;
+}
+
+#edit{
+    background-color: goldenrod;
+    /* color: whitesmoke; */
+}
+
+#del{
+    background-color: darkred;
+    color: whitesmoke;
 }
