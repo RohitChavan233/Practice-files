@@ -16,8 +16,8 @@ const btn = document.querySelector('button')
 const box = document.querySelector('.box')
 
 btn.addEventListener('click', ()=>{
-    const left_ = Math.random() * 50
-    const top_ = Math.random() * 50
+    const left_ = Math.random() * 100
+    const top_ = Math.random() * 100
 
     box.style.left = `${left_}%`
     box.style.top = `${top_}%`
