@@ -102,7 +102,7 @@ form.addEventListener("submit", (event) => {
     form.reset();
 });
 
-let deleteCard = (index) =>{
+let deleteCard = (index) => {
     usersData.splice(index, 1)
     ui()
 }
