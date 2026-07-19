@@ -48,21 +48,17 @@ let ui = () => {
     usersData.forEach((elem, index) => {
         users.innerHTML += `
         <div class="users-card">
-
             <div class="img">
                 <img src="${elem.image}" alt="Image not found">
             </div> 
-
             <div id="values">
                 <h3>Name: ${elem.name}</h3>
                 <p>E-mail: ${elem.email}</p>
             </div>
-
             <div id="boxbtn">
-                <button class="edit">Edit</button>
+                <button class="edit" onclick="editCard(${index})">Edit</button>
                 <button class="del" onClick = "deleteCard(${index})">Delete</button>
             </div>
-
         </div>`
     })
 }
@@ -70,7 +66,7 @@ let ui = () => {
 ui()
 
 form.addEventListener('submit', (events) => {
-    events.defaultPrevented()
+    events.preventDefault()
 
     let name = inp1.value
     let email = inp2.value
@@ -82,12 +78,8 @@ form.addEventListener('submit', (events) => {
         email,
         image,
     })
-
     ui()
-
     console.log(usersData)
-
-
     form.reset()
 })
 
@@ -95,3 +87,21 @@ let deleteCard = (index) =>{
     usersData.splice(index, 1)
     ui()
 }
+
+let editIndex = -1
+
+
+function editCard(index) {
+
+    // Store which user is being edited
+    editIndex = index;
+
+    // Fill form inputs
+    inp1.value = usersData[index].name;
+    inp2.value = usersData[index].email;
+    url.value = usersData[index].image;
+
+    // Change button text
+    form.querySelector("button").textContent = "Update";
+}
+
