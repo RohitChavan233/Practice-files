@@ -46,21 +46,21 @@ let usersData = [
 let ui = () => {
     users.innerHTML = ''
     usersData.forEach((elem, index) => {
-        users.innerHTML = `
+        users.innerHTML += `
         <div class="users-card">
 
             <div class="img">
-                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Image not found">
+                <img src="${elem.image}" alt="Image not found">
             </div> 
 
             <div id="values">
-                <h3>${name}}</h3>
-                <p>${email}</p>
+                <h3>Name: ${elem.name}</h3>
+                <p>E-mail: ${elem.email}</p>
             </div>
 
             <div id="boxbtn">
                 <button class="edit">Edit</button>
-                <button class="del">Delete</button>
+                <button class="del" onClick = "deleteCard(${index})">Delete</button>
             </div>
 
         </div>`
@@ -85,6 +85,13 @@ form.addEventListener('submit', (events) => {
 
     ui()
 
+    console.log(usersData)
+
 
     form.reset()
 })
+
+let deleteCard = (index) =>{
+    usersData.splice(index, 1)
+    ui()
+}

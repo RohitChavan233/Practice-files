@@ -108,8 +108,6 @@ form.addEventListener('submit', (events) => {
     console.log(usersData)
 
     form.reset()
-
-
 })
 
 let deleteCard = (index) => {
