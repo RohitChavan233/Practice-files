@@ -102,7 +102,7 @@ form.addEventListener('submit', (events) => {
         email,
         image,
     })
-    
+
     ui()
 
     console.log(usersData)
@@ -112,7 +112,7 @@ form.addEventListener('submit', (events) => {
 
 })
 
-let deleteCard = (index)=>{
+let deleteCard = (index) => {
     usersData.splice(index, 1)
     ui()
 }
