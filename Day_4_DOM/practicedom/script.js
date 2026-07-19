@@ -65,23 +65,42 @@ let ui = () => {
 
 ui()
 
-form.addEventListener('submit', (events) => {
-    events.preventDefault()
+form.addEventListener("submit", (event) => {
 
-    let name = inp1.value
-    let email = inp2.value
-    let image = url.value
+    event.preventDefault();
 
-    // console.log(name, email, image);
-    usersData.push({
-        name,
-        email,
-        image,
-    })
-    ui()
-    console.log(usersData)
-    form.reset()
-})
+    const name = inp1.value;
+    const email = inp2.value;
+    const image = url.value;
+
+    if (editIndex === -1) {
+
+        // Create new user
+        usersData.push({
+            name,
+            email,
+            image
+        });
+
+    } else {
+
+        // Update existing user
+        usersData[editIndex] = {
+            ...usersData[editIndex],
+            name,
+            email,
+            image
+        };
+
+        editIndex = -1;
+
+        form.querySelector("button").textContent = "Create";
+    }
+
+    ui();
+
+    form.reset();
+});
 
 let deleteCard = (index) =>{
     usersData.splice(index, 1)
