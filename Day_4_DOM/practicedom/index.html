@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Fill up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="">
+        <input required type="text" placeholder="Enter your name" id="name">
+        <input required type="text" placeholder="Enter your email" id="email">
+        <input required type="url" placeholder="past img URL" id="url">
+        <button>Create</button>
+    </form>
+    <div class="users">
+        <div class="users-card">
+
+            <div class="img">
+                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Image not found">
+            </div> 
+
+            <div id="values">
+                <h3>Name</h3>
+                <p>Emnail</p>
+            </div>
+
+            <div id="boxbtn">
+                <button class="edit">Edit</button>
+                <button class="del">Delete</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
