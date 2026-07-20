@@ -31,14 +31,15 @@ const randomColor = () => {
 
 const randomBox = () => {
     main.append(box)
-    time += 1
-    timer.textContent = time
 
-    const left_ = Math.random() * 100
-    const top_ = Math.random() * 100
+    let mainH = main.clientHeight-box.offsetHeight
+    let mainW = main.clientWidth-box.offsetWidth
 
-    box.style.left = `${left_}%`
-    box.style.top = `${top_}%`
+    const left_ = Math.random() * mainH
+    const top_ = Math.random() * mainW
+
+    box.style.left = `${top_}px`
+    box.style.top = `${left_}px`
 }
 
 btn.addEventListener('click', () => {
@@ -49,6 +50,8 @@ btn.addEventListener('click', () => {
     interval = setInterval(() => {
         randomBox()
         randomColor()
+    time += 1
+    timer.textContent = time
 
     }, 1000);
 
