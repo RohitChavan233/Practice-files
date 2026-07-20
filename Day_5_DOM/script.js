@@ -14,11 +14,24 @@
 const main = document.querySelector('main')
 const btn = document.querySelector('button')
 const box = document.querySelector('.box')
+const timer = document.querySelector('#timer')
 
-btn.addEventListener('click', ()=>{
+let time = 0
+let interval
+
+btn.addEventListener('click', () => {
     const left_ = Math.random() * 100
     const top_ = Math.random() * 100
 
     box.style.left = `${left_}%`
     box.style.top = `${top_}%`
+
+    interval = setInterval(() => {
+        time += 1
+        timer.textContent = time
+    }, 1000);
+
+    setTimeout(() => {
+        clearTimeout(interval)
+    }, 10000);
 })
