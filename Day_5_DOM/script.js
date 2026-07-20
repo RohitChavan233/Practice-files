@@ -21,6 +21,14 @@ box.classList.add('box')
 let time = 0
 let interval
 
+const randomColor = () => {
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+
+    box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+}
+
 const randomBox = () => {
     main.append(box)
     time += 1
@@ -35,10 +43,13 @@ const randomBox = () => {
 
 btn.addEventListener('click', () => {
     randomBox()
+    randomColor()
     clearInterval(interval)
 
     interval = setInterval(() => {
         randomBox()
+        randomColor()
+
     }, 1000);
 
     setTimeout(() => {
