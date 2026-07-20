@@ -66,11 +66,5 @@ btn.addEventListener('click', () => {
 
 box.addEventListener('click', () => {
     score += 10
-
     scoree.textContent = score
-    // interval = setInterval(() => {
-    //     randomBox()
-    //     randomColor()    
-
-    // }, 1000);
 })
