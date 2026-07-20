@@ -45,3 +45,15 @@ button{
 #top{
     color: white;
 }
+
+#overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.742);
+    color: white;
+    position: absolute;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
