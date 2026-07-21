@@ -22,6 +22,11 @@ form.addEventListener('submit', (event)=>{
     let price  = event.target[2].value
     let image  = event.target[3].value
 
+    if (productArr === '' || description === '' || price === '' || image === ''){
+        alert('Please fill all the fields')
+        return
+    }
+
 
     let obj = {
         productName,
@@ -31,4 +36,7 @@ form.addEventListener('submit', (event)=>{
     }
 
     productArr.push(obj)
+    console.log(productArr)
+
+    form.reset()
 })
