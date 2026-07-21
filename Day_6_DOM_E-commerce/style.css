@@ -90,3 +90,42 @@ button {
     background-color: darkred;
     color: white;
 }
+
+.form{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.674);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input{
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.form .top{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    color: darkred;
+    font-size: 20px;
+    cursor: pointer;
+}
