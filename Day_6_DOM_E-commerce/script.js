@@ -24,17 +24,12 @@ let ui = ()=>{
                 </div>
 
                 <div class="btns">
-                    <button id="update">Update</button>
+                    <button onclick = "updateProduct('${elem.productName}')" id="update">Update</button>
                     <button id="delete">Delete</button>
                 </div>
             </div>`
     });
 }
-
-
-
-
-
 
 createBtn.addEventListener('click', () => {
     formDiv.style.display = 'flex'
@@ -76,3 +71,9 @@ form.addEventListener('submit', (event) => {
     formDiv.style.display = 'none'
 
 })
+
+const updateProduct = (name)=>{
+    console.log(name)
+}
+
+updateProduct()
