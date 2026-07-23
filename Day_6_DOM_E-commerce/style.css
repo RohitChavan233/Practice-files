@@ -40,11 +40,14 @@ button {
 
 .products {
     display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
     height: 100%;
     width: 100%;
 }
 
 .products-card {
+    /* margin-right: 10px; */
     padding: 10px;
     height: 40%;
     width: 20%;
