@@ -73,7 +73,13 @@ form.addEventListener('submit', (event) => {
 })
 
 const updateProduct = (name)=>{
-    console.log(name)
+    formDiv.style.display = 'flex'
+    let product  = productArr.find((elem) => elem.productName === name)
+    // console.log(product)
+    form[0].value = product.productName
+    form[1].value = product.description
+    form[2].value = product.price
+    form[3].value = product.image
 }
 
 updateProduct()
