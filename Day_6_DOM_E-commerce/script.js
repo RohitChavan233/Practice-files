@@ -5,11 +5,12 @@ const form = document.querySelector('form')
 const productDiv = document.querySelector('.products')
 
 const productArr = []
+const updateIndex = null
 
 // https://picsum.photos/300/300
 
 
-let ui = ()=>{
+let ui = () => {
     productDiv.innerHTML = ''
     productArr.forEach((elem) => {
         productDiv.innerHTML += `
@@ -59,9 +60,17 @@ form.addEventListener('submit', (event) => {
         image,
     }
 
-    productArr.push(obj)
-    console.log(productArr)
+
+    if (updateIndex != null) {
+        productArr[updateIndex] = obj
+        updateIndex = null
+    } else {
+        productArr.push(obj)
+    }
+
+    
     ui()
+    console.log(productArr)
     // formDiv.style.display = 'none' 
 
 
@@ -72,9 +81,11 @@ form.addEventListener('submit', (event) => {
 
 })
 
-const updateProduct = (name)=>{
+const updateProduct = (name) => {
     formDiv.style.display = 'flex'
-    let product  = productArr.find((elem) => elem.productName === name)
+    let product = productArr.find((elem) => elem.productName === name)
+
+    updateIndex = productArr.findIndex((elem) => elem.productName === name)
     // console.log(product)
     form[0].value = product.productName
     form[1].value = product.description
